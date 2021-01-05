@@ -1,0 +1,1238 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+	.img-big
+		display: block
+	.img-small
+		display: none
+	.hd
+		display: none
+	.h2
+		font-size: rem(28)
+		line-height: rem(34)
+
+	.modal
+		.modal-dialog
+			.modal-box, .modal-content
+				padding: rem(40) rem(60)
+				.close
+					display: block
+					span
+				.modal-h
+					font-size: rem(36)
+					line-height: rem(42)
+					font-weight: bold
+				.modal-title
+					font-size: rem(24)
+					line-height: rem(32)
+					margin-bottom: rem(30)
+				.form-group
+				.form-item
+
+	.modal
+		.modal-dialog
+			&.modal-full
+			.adds-modal-content
+				padding: rem(20)
+				.container-fluid
+					.row
+						.m-tab-img
+							.m-tab-imgbox
+								.m-img
+							.m-tab-box
+								.m-tab-link
+						.m-text
+							.close
+								top: rem(-25)
+								right: rem(-25)
+								bottom: initial
+							.title
+							.mark-box
+								.m-rev-mark
+								.m-rev-mark-text
+							.m-text-about
+								p
+							.m-buy-box
+								.price-text
+								.price
+							.m-adds-form
+								flex-direction: row
+								margin-bottom: 0
+								.form-item
+							.m-share-box
+								.text-share
+								.m-share-link
+
+	/* BlackFriday Banner Start */
+
+	.banner
+		display: block // fridayblack
+
+	.bannerm
+		display: none // fridayblack
+
+	/* BlackFriday Banner End */
+
+	header
+		.nav-sticky
+			.navbar-desctop
+				display: flex
+				.header-logo
+					img
+						max-width: rem(125)
+				.header-nav
+					a[href="#about"]
+						display: none
+				.header-call
+					justify-content: flex-end
+					.btn
+						margin: 0
+					.header-phones
+						display: none
+
+			.navbar-mobile
+				display: none
+		.header-video
+			video
+				display: block
+			.container
+				.row
+					.cta-container
+						.pre
+							margin-bottom: rem(70)
+						.h2
+							font-size: rem(80)
+							line-height: rem(84)
+							margin-bottom: rem(30)
+						.offer
+							font-size: rem(28)
+
+	.tips
+		.container
+			.row
+				flex-wrap: nowrap
+				.tips-container
+					img
+					p
+						font-size: rem(14)
+
+
+	.video-plant
+		.container
+			padding-top: rem(30)
+			padding-bottom: rem(30)
+			.row
+				.video
+					.video-container
+				.text
+					padding: rem(50) rem(40) rem(40) rem(20)
+					.h2
+						font-size: rem(28)
+						line-height: rem(34)
+						margin-bottom: rem(20)
+					.cta
+						font-size: rem(20)
+						line-height: rem(26)
+
+	.catalog-lk
+		padding-top: rem(50)
+		padding-bottom: rem(50)
+		.container
+			.title__block
+				.title__line
+					.h2
+						// font-size: rem(50)
+						// .kozak
+						// 	font-size: rem(70)
+			.cat__block
+				margin-bottom: rem(50)
+				.cat__item
+					.cat__wrapper
+						padding: rem(20) rem(40)
+						// width: 75%
+						.cat__inner
+							.h4
+								.kozak
+									font-size: rem(32)
+							.cat__price
+								margin-bottom: rem(20)
+								strong
+									font-size: 36px
+			.gifts__block
+				.gift__item
+					.wrap
+						height: rem(300)
+						width: rem(300)
+						.gift__text
+							padding: rem(80) rem(20) rem(20)
+							h2
+								line-height: rem(40)
+								font-size: 38px
+								padding-bottom: rem(20)
+							p
+								font-size: 20px
+				.left
+					justify-content: flex-end
+				.right
+					justify-content: flex-start
+			.cat__stoim
+				.col-12
+					p
+						font-size: 28px
+						padding-top: rem(40)
+
+	/* Blackfriday Start */
+
+	.blackfriday
+		padding: 0 0 rem(40) 0
+		.container
+			.bf-row
+				flex-direction: row
+				.bf-img-block
+					width: 50%
+				.bf-text-block
+					width: 50%
+					.aqua, .small-h
+						font-size: 44px
+						line-height: 44px
+					.aqua
+						.logo-font
+							font-size: 48px
+					.img-responsive
+					.small-h
+					.bf-adds
+					.bf-btn
+
+	/* Blackfriday End */
+
+	.specification
+		padding-top: rem(30)
+		padding-bottom: rem(50)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(30)
+			.row
+				.spec-img
+					.tab-img
+				.spaec-details
+					.spaec-details-box
+						padding: rem(25)
+						border: 4px solid $light-blue
+						.tabs
+							.title
+								font-size: rem(24)
+								line-height: rem(29)
+							.tabs-container
+								margin-bottom: rem(30)
+								.tab
+									.tablink
+										height: rem(42)
+										width: rem(67)
+										font-size: rem(13)
+										line-height: rem(42)
+										font-weight: bold
+						.title
+						ul
+							li
+								flex-direction: column
+								// align-items: flex-end
+								&:last-child
+									margin-bottom: 0
+								.label
+								.separator
+								.valey
+								.tab-kg
+				.spaec-tips
+					justify-content: flex-start
+					.tips-box
+						padding: rem(25)
+						margin-bottom: rem(30)
+						li
+							i
+								width: rem(30)
+								height: rem(30)
+							p
+								font-size: rem(13)
+					.product-box
+						padding: rem(20) rem(15)
+						.title
+						.tab-product
+							li
+								.label
+								.separator
+								.tab-speac
+
+	.akciya
+		padding-top: rem(60)
+		.container
+			.akciya-box
+				box-shadow: 0 0 rem(48) 0 rgba(0,0,0,0.2)
+				margin-bottom: rem(60)
+				.h2
+					font-size: rem(24)
+					padding: rem(30)
+					padding-bottom: 0
+					margin-bottom: 0
+					line-height: initial
+				.akciya-present
+					flex-direction: row
+					padding: rem(30)
+					.akciya-img
+						margin-right: rem(30)
+						flex: 0 1 rem(255)
+						margin-bottom: 0
+						img
+						.title
+							font-size: rem(15)
+					.akciya-timer
+						.timer-title
+						.timer
+							justify-content: center
+							.timer-points, .delimiter
+								font-size: rem(48)
+								line-height: rem(56)
+							.timer-points
+								min-width: rem(70)
+							.timer-text
+							.delimiter
+								display: block
+				.akciya-form
+					flex-direction: row
+					padding: rem(25) rem(30) rem(35)
+					margin: 0
+					border-radius: initial
+					input
+						margin-bottom: 0
+					.btn-orange
+
+	.video-instructions
+		.container
+			.row
+		 		.h2
+		 		.carousel
+		 			.carousel-inner
+		 			.carousel-indicators
+		 				display: none
+
+	.book
+		padding-top: rem(60)
+		.container
+			.row
+				.book-form-box
+					padding-bottom: rem(10)
+					.h2
+						text-align: left
+					.book-title
+						font-size: rem(24)
+						line-height: rem(28)
+						margin-bottom: rem(30)
+						text-align: left
+					.book-form
+						padding: rem(30) rem(20)
+						margin: initial
+						.book-form-title
+							margin-bottom: rem(30)
+						.book-form-group
+							.b-form-item
+								margin-bottom: rem(20)
+						.book-police
+				.book-book
+					display: flex
+
+	.review
+		padding-top: rem(60)
+		padding-bottom: rem(60)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(30)
+				.carousel
+					.carousel-inner
+						margin-bottom: rem(30)
+						.carousel-item
+							.row
+								.rev-video
+									.rev-video-container
+										padding: initial
+										.rev-video-caption
+											position: absolute
+											background-color: rgba(255,255,255,.7)
+											.caption-t
+								.rev-photo
+									display: flex
+
+	.adds
+		.container
+			.row
+				.h2
+				.title
+					font-size: rem(36)
+					line-height: rem(42)
+					margin-bottom: rem(40)
+				.carousel-inner
+					display: flex
+					flex-wrap: wrap
+					.carousel-item
+						max-width: 50%
+						.carusel-box
+							flex-direction: row
+							align-items: initial
+							.adds-box
+								margin: rem(10)
+								.adds-img
+								.adds-name
+								.adds-text
+								.adds-prise
+									.price
+										span
+								.adds-btn
+				.carousel-indicators
+					display: none
+
+	.faq
+		padding: rem(60) 0 rem(50)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(30)
+				.faq-form
+					.faq-form-container
+						padding: rem(30)
+
+	.footer
+		padding: rem(40) 0 rem(30)
+		.container
+			.row
+				.footer-logo
+					img
+						margin: initial
+				.footer-contacts, .footer-time, .footer-social, .footer-consultation
+					.f-title
+						text-align: left
+					.cont-box
+						.cont-item
+							img
+							.cont
+							a
+				.footer-contacts
+				.footer-time
+					.cont-box
+						align-items: initial
+						text-align: left
+				.footer-social
+					.f-soc-box
+						justify-content: initial
+						.soc-item
+				.footer-consultation
+					.f-title
+						text-align: center
+						margin: rem(20) 0
+					.f-btn
+
+// ≤992px
++media-breakpoint-up(lg)
+	.hd
+		display: none
+	.h2
+		font-size: rem(28)
+		line-height: rem(34)
+
+	.modal
+		.modal-dialog
+			.modal-box, .modal-content
+				padding: rem(40) rem(60)
+				.close
+					display: block
+					span
+				.modal-h
+					font-size: rem(36)
+					line-height: rem(42)
+					font-weight: bold
+				.modal-title
+					font-size: rem(24)
+					line-height: rem(32)
+					margin-bottom: rem(30)
+				.form-group
+				.form-item
+
+	.modal
+		.modal-dialog
+			&.modal-full
+			.adds-modal-content
+				padding: rem(20)
+				.container-fluid
+					.row
+						.m-tab-img
+							.m-tab-imgbox
+								.m-img
+							.m-tab-box
+								.m-tab-link
+						.m-text
+							.close
+								top: rem(-25)
+								right: rem(-25)
+								bottom: initial
+							.title
+							.mark-box
+								.m-rev-mark
+								.m-rev-mark-text
+							.m-text-about
+								p
+							.m-buy-box
+								.price-text
+								.price
+							.m-adds-form
+								flex-direction: row
+								margin-bottom: 0
+								.form-item
+							.m-share-box
+								.text-share
+								.m-share-link
+
+	header
+		.nav-sticky
+			.navbar-desctop
+				display: flex
+				.header-logo
+					img
+						max-width: rem(154)
+				.header-nav
+					a[href="#about"]
+						display: none
+				.header-call
+					justify-content: flex-end
+					.btn
+						margin: 0
+					.header-phones
+						display: none
+			.navbar-mobile
+				display: none
+
+	.tips
+		.container
+			.row
+				flex-wrap: nowrap
+				.tips-container
+					img
+					p
+						font-size: rem(14)
+
+
+	.video-plant
+		.container
+			padding-top: rem(30)
+			padding-bottom: rem(30)
+			.row
+				.video
+					.video-container
+				.text
+					padding: rem(50) rem(40) rem(40) rem(20)
+					.h2
+						font-size: rem(28)
+						line-height: rem(34)
+						margin-bottom: rem(20)
+					.cta
+						font-size: rem(20)
+						line-height: rem(26)
+
+	.akciya
+		padding-top: rem(60)
+		.container
+			.akciya-box
+				box-shadow: 0 0 rem(48) 0 rgba(0,0,0,0.2)
+				margin-bottom: rem(60)
+				.h2
+					font-size: rem(24)
+					padding: rem(30)
+					padding-bottom: 0
+					margin-bottom: 0
+					line-height: initial
+				.akciya-present
+					flex-direction: row
+					padding: rem(30)
+					.akciya-img
+						margin-right: rem(30)
+						flex: 0 1 rem(255)
+						margin-bottom: 0
+						img
+						.title
+							font-size: rem(15)
+					.akciya-timer
+						.timer-title
+						.timer
+							justify-content: center
+							.timer-points, .delimiter
+								font-size: rem(88)
+								line-height: rem(90)
+							.timer-points
+								min-width: rem(110)
+							.timer-text
+							.delimiter
+								display: block
+				.akciya-form
+					flex-direction: row
+					padding: rem(25) rem(30) rem(35)
+					margin: 0
+					border-radius: initial
+					input
+						margin-bottom: 0
+					.btn-orange
+
+	.video-instructions
+		.container
+			.row
+		 		.h2
+		 		.carousel
+		 			.carousel-inner
+		 			.carousel-indicators
+		 				display: none
+
+	.catalog
+		padding-top: rem(50)
+		padding-bottom: rem(30)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(20)
+				.catalog-box
+					flex-direction: row
+					padding: rem(30)
+					margin: 0
+					.cat-img-container
+						.cat-img
+						img
+					.cat-choise
+						.cat-choise-complect
+							padding-bottom: rem(40)
+							.tabs
+								.title
+									font-size: rem(24)
+									margin-bottom: rem(20)
+								.cat-tabs-container
+									.cat-tab
+										.cat-tablink
+											width: rem(105)
+							.cat-price
+								.price
+									.pr-desc
+										display: block
+										font-size: rem(24)
+										font-weight: bold
+										margin: 0
+										margin-bottom: rem(15)
+									.cat-price-item
+										height: rem(43)
+										flex-wrap: nowrap
+										.pr-mob
+											display: none
+										.cat-price-container
+											margin-bottom: 0
+											width: 100%
+											.new-price
+												font-size: rem(34)
+											.old-price
+										.btn-cat
+											margin: 0
+						.catalog-title
+							margin-bottom: rem(20)
+						.cat-choise-single
+							flex-direction: row
+							.cat-tank-container
+								.tank-title
+								.cat-tank-tabs
+									.cat-tank-img
+										justify-content: initial
+										.tank-img
+											img
+										.cat-tank-tab
+											.tank-tab
+												.tank-tablink	
+									.cat-tank-price
+										max-width: rem(130)
+										.price-tank
+											.price
+												span
+											.btn-tank
+							.cat-col-container
+								.col-title
+								.col-box
+									.col-img
+										img
+									.price-col
+										.price
+											span
+										.btn-col
+					.cat-complect
+						border-left: 2px solid #D8D8D8
+						padding-left: rem(25)
+						.title
+							font-size: rem(25)
+						ul
+							flex-direction: column
+							li
+								flex-direction: row
+								margin-bottom: rem(45)
+								width: 100%
+								img
+									margin-right: rem(30)
+									margin-bottom: 0
+								p
+									font-size: rem(18)
+									line-height: rem(22)
+									text-align: left
+
+	.book
+		padding-top: rem(60)
+		.container
+			.row
+				.book-form-box
+					padding-bottom: rem(105)
+					.h2
+						text-align: left
+					.book-title
+						font-size: rem(24)
+						line-height: rem(28)
+						margin-bottom: rem(30)
+						text-align: left
+					.book-form
+						padding: rem(30) rem(20)
+						margin: initial
+						.book-form-title
+							margin-bottom: rem(30)
+						.book-form-group
+							.b-form-item
+								margin-bottom: rem(20)
+						.book-police
+				.book-book
+					display: flex
+
+	.review
+		padding-top: rem(60)
+		padding-bottom: rem(60)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(30)
+				.carousel
+					.carousel-inner
+						margin-bottom: rem(30)
+						.carousel-item
+							.row
+								.rev-video
+									.rev-video-container
+										padding: initial
+										.rev-video-caption
+											position: absolute
+											background-color: rgba(255,255,255,.7)
+											.caption-t
+								.rev-photo
+									display: flex
+
+	.adds
+		.container
+			.row
+				.h2
+				.title
+					font-size: rem(36)
+					line-height: rem(42)
+					margin-bottom: rem(40)
+				.carousel-inner
+					display: flex
+					flex-wrap: wrap
+					.carousel-item
+						max-width: 50%
+						.carusel-box
+							flex-direction: row
+							align-items: initial
+							.adds-box
+								margin: rem(10)
+								.adds-img
+								.adds-name
+								.adds-text
+								.adds-prise
+									.price
+										span
+								.adds-btn
+				.carousel-indicators
+					display: none
+
+	.faq
+		padding: rem(60) 0 rem(50)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(30)
+				.faq-form
+					.faq-form-container
+						padding: rem(30)
+
+	.footer
+		padding: rem(40) 0 rem(30)
+		.container
+			.row
+				.footer-logo
+					img
+						margin: initial
+				.footer-contacts, .footer-time, .footer-social, .footer-consultation
+					.f-title
+						text-align: left
+					.cont-box
+						.cont-item
+							img
+							.cont
+							a
+				.footer-contacts
+				.footer-time
+					.cont-box
+						align-items: initial
+						text-align: left
+				.footer-social
+					.f-soc-box
+						justify-content: initial
+						.soc-item
+				.footer-consultation
+					.f-title
+						text-align: center
+						margin: rem(20) 0
+					.f-btn
+
+// ≤1200px
++media-breakpoint-up(xl)
+	.hd
+		display: inline
+	.h2
+		font-size: rem(36)
+		line-height: rem(44)
+
+	.modal
+		.modal-dialog
+			.modal-box, .modal-content
+				padding: rem(40) rem(60)
+				.close
+					display: block
+					span
+				.modal-h
+					font-size: rem(36)
+					line-height: rem(42)
+					font-weight: bold
+				.modal-title
+					font-size: rem(24)
+					line-height: rem(32)
+					margin-bottom: rem(30)
+				.form-group
+				.form-item
+
+	.modal
+		.modal-dialog
+			&.modal-full
+			.adds-modal-content
+				padding: rem(20)
+				.container-fluid
+					.row
+						.m-tab-img
+							.m-tab-imgbox
+								.m-img
+							.m-tab-box
+								.m-tab-link
+						.m-text
+							.close
+								top: rem(-25)
+								right: rem(-25)
+								bottom: initial
+							.title
+							.mark-box
+								.m-rev-mark
+								.m-rev-mark-text
+							.m-text-about
+								p
+							.m-buy-box
+								.price-text
+								.price
+							.m-adds-form
+								flex-direction: row
+								margin-bottom: 0
+								.form-item
+							.m-share-box
+								.text-share
+								.m-share-link
+
+	header
+		.nav-sticky
+			.navbar-desctop
+				display: flex
+				.header-nav
+					a[href="#about"]
+						display: block
+				.header-call
+					justify-content: space-between
+					.btn
+						margin-left: rem(-15)
+					.header-phones
+						display: block
+			.navbar-mobile
+				display: none
+
+	.tips
+		.container
+			.row
+				flex-wrap: nowrap
+				.tips-container
+					img
+					p
+						font-size: rem(18)
+
+
+	.video-plant
+		.container
+			padding-top: rem(30)
+			padding-bottom: rem(30)
+			.row
+				.video
+					.video-container
+				.text
+					padding: rem(50) rem(40) rem(40) rem(20)
+					.h2
+						font-size: rem(36)
+						line-height: rem(46)
+						margin-bottom: rem(20)
+					.cta
+						font-size: rem(24)
+						line-height: rem(32)
+
+	.specification
+		padding-top: rem(30)
+		padding-bottom: rem(50)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(30)
+			.row
+				.spec-img
+					.tab-img
+				.spaec-details
+					.spaec-details-box
+						padding: rem(25)
+						border: 4px solid $light-blue
+						.tabs
+							.title
+								font-size: rem(24)
+								line-height: rem(29)
+							.tabs-container
+								margin-bottom: rem(30)
+								.tab
+									.tablink
+										height: rem(42)
+										width: rem(120)
+										line-height: rem(42)
+										font-weight: bold
+						.title
+						ul
+							li
+								flex-direction: row
+								align-items: flex-end
+								&:last-child
+									margin-bottom: 0
+								.label
+								.separator
+								.valey
+								.tab-kg
+				.spaec-tips
+					.tips-box
+						padding: rem(25)
+						margin-bottom: 0
+						li
+							i
+							p
+					.product-box
+						padding: rem(20) rem(15)
+						.title
+						.tab-product
+							li
+								.label
+								.separator
+								.tab-speac
+
+	.akciya
+		padding-top: rem(60)
+		.container
+			.akciya-box
+				box-shadow: 0 0 rem(48) 0 rgba(0,0,0,0.2)
+				margin-bottom: rem(60)
+				.h2
+					font-size: rem(24)
+					padding: rem(30)
+					padding-bottom: 0
+					margin-bottom: 0
+					line-height: initial
+				.akciya-present
+					flex-direction: row
+					padding: rem(30)
+					.akciya-img
+						margin-right: rem(30)
+						flex: 0 1 rem(255)
+						margin-bottom: 0
+						img
+						.title
+							font-size: rem(18)
+					.akciya-timer
+						.timer-title
+						.timer
+							justify-content: center
+							.timer-points, .delimiter
+								font-size: rem(88)
+								line-height: rem(90)
+							.timer-points
+								min-width: rem(110)
+							.timer-text
+							.delimiter
+								display: block
+				.akciya-form
+					flex-direction: row
+					padding: rem(25) rem(30) rem(35)
+					margin: 0
+					border-radius: initial
+					input
+						margin-bottom: 0
+					.btn-orange
+
+	.video-instructions
+		.container
+			.row
+		 		.h2
+		 		.carousel
+		 			.carousel-inner
+		 			.carousel-indicators
+		 				display: none
+
+	.catalog
+		padding-top: rem(50)
+		padding-bottom: rem(30)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(20)
+				.catalog-box
+					flex-direction: row
+					padding: rem(30)
+					margin: 0
+					.cat-img-container
+						.cat-img
+						img
+					.cat-choise
+						.cat-choise-complect
+							padding-bottom: rem(40)
+							.tabs
+								.title
+									font-size: rem(24)
+									margin-bottom: rem(20)
+								.cat-tabs-container
+									.cat-tab
+										.cat-tablink
+											width: rem(126)
+							.cat-price
+								.price
+									.pr-desc
+										display: block
+										font-size: rem(24)
+										font-weight: bold
+										margin: 0
+										margin-bottom: rem(15)
+									.cat-price-item
+										height: rem(43)
+										flex-wrap: nowrap
+										.pr-mob
+											display: none
+										.cat-price-container
+											margin-bottom: 0
+											width: 100%
+											.new-price
+												font-size: rem(40)
+											.old-price
+										.btn-cat
+											margin: 0
+						.catalog-title
+							margin-bottom: rem(20)
+						.cat-choise-single
+							flex-direction: row
+							.cat-tank-container
+								.tank-title
+								.cat-tank-tabs
+									.cat-tank-img
+										justify-content: initial
+										.tank-img
+											img
+										.cat-tank-tab
+											.tank-tab
+												.tank-tablink	
+									.cat-tank-price
+										max-width: rem(165)
+										.price-tank
+											.price
+												span
+											.btn-tank
+							.cat-col-container
+								.col-title
+								.col-box
+									.col-img
+										img
+									.price-col
+										.price
+											span
+										.btn-col
+					.cat-complect
+						border-left: 2px solid #D8D8D8
+						padding-left: rem(25)
+						.title
+						ul
+							flex-direction: column
+							li
+								flex-direction: row
+								margin-bottom: rem(45)
+								width: 100%
+								img
+									margin-right: rem(30)
+									margin-bottom: 0
+								p
+									font-size: rem(18)
+									line-height: rem(22)
+									text-align: left
+
+	.book
+		padding-top: rem(60)
+		.container
+			.row
+				.book-form-box
+					padding-bottom: rem(105)
+					.h2
+						text-align: left
+					.book-title
+						font-size: rem(24)
+						line-height: rem(28)
+						margin-bottom: rem(30)
+						text-align: left
+					.book-form
+						padding: rem(30) rem(20)
+						margin: initial
+						.book-form-title
+							margin-bottom: rem(30)
+						.book-form-group
+							.b-form-item
+								margin-bottom: rem(20)
+						.book-police
+				.book-book
+					display: flex
+
+	.review
+		padding-top: rem(60)
+		padding-bottom: rem(60)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(30)
+				.carousel
+					.carousel-inner
+						margin-bottom: rem(30)
+						.carousel-item
+							.row
+								.rev-video
+									.rev-video-container
+										padding: initial
+										.rev-video-caption
+											position: absolute
+											background-color: rgba(255,255,255,.7)
+											.caption-t
+								.rev-photo
+									display: flex
+
+	.adds
+		.container
+			.row
+				.h2
+				.title
+					font-size: rem(36)
+					line-height: rem(42)
+					margin-bottom: rem(40)
+				.carousel-inner
+					display: flex
+					flex-wrap: wrap
+					.carousel-item
+						max-width: 50%
+						.carusel-box
+							flex-direction: row
+							.adds-box
+								margin: initial
+								margin-bottom: rem(30)
+								.adds-img
+								.adds-name
+								.adds-text
+								.adds-prise
+									.price
+										span
+								.adds-btn
+				.carousel-indicators
+					display: none
+
+	.faq
+		padding: rem(60) 0 rem(50)
+		.container
+			.row
+				.h2
+					margin-bottom: rem(30)
+				.faq-form
+					.faq-form-container
+						padding: rem(30)
+
+	.footer
+		padding: rem(40) 0 rem(30)
+		.container
+			.row
+				.footer-logo
+					img
+						margin: initial
+				.footer-contacts, .footer-time, .footer-social, .footer-consultation
+					.f-title
+						text-align: left
+					.cont-box
+						.cont-item
+							img
+							.cont
+							a
+				.footer-contacts
+				.footer-time
+					.cont-box
+						align-items: initial
+						text-align: left
+				.footer-social
+					.f-soc-box
+						justify-content: initial
+						.soc-item
+				.footer-consultation
+					.f-title
+						text-align: center
+						margin: rem(20) 0
+					.f-btn
+
+

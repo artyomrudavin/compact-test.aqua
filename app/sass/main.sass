@@ -1,0 +1,1506 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+ul
+	list-style: none
+	padding: 0
+	margin: 0
+
+button,
+button:active,
+button:focus
+	outline: none
+
+.btn
+	display: block
+	border-radius: 5px
+	height: rem(44)
+	width: 100%
+	border: none
+	font-size: rem(14)
+	font-weight: bold
+	color: #fff
+	transition: .7s
+	cursor: pointer
+
+
+.btn-orange
+	background-color: $orange
+	&:hover
+		background-color: darken($orange, 10%)
+
+.btn-green
+	background-color: $green
+	&:hover
+		background-color: darken($green, 10%)
+
+.h1
+	font-family: $h-font
+
+.h2
+	font-family: $h-font
+	font-size: rem(18)
+	line-height: rem(22)
+
+// Carusel Control
+
+.carousel-control
+	display: flex
+	justify-content: center
+	.carousel-control-prev,
+	.carousel-control-next
+		margin: 0 rem(20)
+		width: rem(50)
+		height: rem(50)
+		opacity: 1
+		position: initial
+		background: url(../img/review/arrow-inactive.png) no-repeat
+		background-size: contain
+		&:hover
+			background: url(../img/review/arrow-active.png) no-repeat
+			background-size: contain
+	.carousel-control-next
+		transform: rotate(180deg)
+
+// Carusel Indicators
+
+.carousel-indicators
+	position: initial
+	li
+		position: relative
+		width: rem(40)
+		height: rem(9)
+		margin: 0 rem(3)
+		background-color: #fff
+		border: 1px solid $accent
+		border-radius: 5px
+		&.active
+			background-color: $accent
+
+// Modal Start
+
+.modal
+	.modal-dialog
+		.modal-box, .modal-content
+			position: relative
+			background-color: #FFFFFF
+			border-radius: 5px
+			padding: rem(20) rem(15)
+			.close
+				display: none
+				position: absolute
+				right: 0
+				top: 0
+				background-color: transparent
+				padding: 0
+				border: none
+				cursor: pointer
+				span
+					font-size: rem(48)
+					line-height: initial
+					font-weight: bold
+					color: $grey
+					padding: 0 rem(23)
+			.modal-h
+				color: $accent
+				font-size: rem(18)
+				line-height: rem(26)
+				font-weight: 500
+				text-align: center
+				margin-bottom: rem(20)
+			.modal-title
+				font-size: rem(18)
+				line-height: rem(26)
+				font-weight: 500
+				text-align: center
+				margin-bottom: rem(20)
+			.form-group
+				display: flex
+				flex-direction: column
+				.form-item
+					margin-bottom: rem(20)
+					height: rem(44)
+					border: 1px solid $grey
+					color: $grey
+					border-radius: 5px
+					background-color: #FFFFFF
+					padding: rem(14)
+
+// Modal End
+
+// Modal-add Start
+
+.modal
+	.modal-dialog
+		&.modal-full
+			max-width: rem(1000)
+		.adds-modal-content
+			background-color: #FFFFFF
+			.container-fluid
+				.row
+					.m-tab-img
+						.m-tab-imgbox
+							border: 2px solid $accent
+							margin-bottom: rem(15)
+							.m-img
+								display: none
+								&.active
+									display: block
+						.m-tab-box
+							display: flex
+							.m-tab-link
+								border: 2px solid $accent
+								padding: rem(10)
+								margin-right: rem(15)
+					.m-text
+						.close
+							display: block
+							top: initial
+							right: 0
+							bottom: rem(-15)
+						.title
+							font-family: $h-font
+							font-size: rem(24)
+							line-height: rem(32)
+							font-weight: bold
+							margin-bottom: rem(20)
+						.mark-box
+							display: flex
+							margin-bottom: rem(20)
+							.m-rev-mark
+								flex: 0 0 auto
+								margin-right: rem(10)
+							.m-rev-mark-text
+								flex: 0 0 auto
+								font-size: rem(14)
+								line-height: rem(14)
+								color: $orange
+						.m-text-about
+							font-size: rem(14)
+							line-height: rem(20)
+							p
+								margin-bottom: rem(15)
+						.m-buy-box
+							display: flex
+							align-items: center
+							margin-bottom: rem(15)
+							.price-text
+								flex: 0 0 auto
+								color: #222222
+								margin-right: rem(30)
+								font-size: rem(18)
+								font-weight: 500
+							.price
+								flex: 0 0 auto
+								color: $green
+								font-size: rem(40)
+								font-weight: bold
+								line-height: rem(47)
+								margin-right: rem(25)
+						.m-adds-form
+							display: flex
+							flex-direction: column
+							margin-bottom: rem(10)
+							width: 100%
+							.form-item
+								width: 100%
+								height: rem(44)
+								border: 1px solid $grey
+								color: $grey
+								border-radius: 5px
+								background-color: #FFFFFF
+								padding: rem(14)
+								margin-bottom: rem(15)
+								margin-right: rem(10)
+						.m-share-box
+							display: flex
+							align-items: center
+							.text-share
+								font-size: rem(14)
+								margin: 0
+								margin-right: rem(15)
+							.m-share-link
+								max-width: rem(32)
+
+// Modal-add End
+
+.showMenu
+	top: 0!important // fridayblack
+
+/* BlackFriday Banner Start */
+
+.banner
+	display: none
+
+.banner, .bannerm
+	margin: 0
+	padding: 0
+	text-align: center
+	a
+		text-decoration: none
+		display: block
+		background: #000
+		height: 60px
+		width: 100%
+		img
+			display: block
+			max-width: 1316px
+			margin: 0 auto
+			width: 100%
+
+.bannerm
+	a
+		height: auto
+
+/* BlackFriday Banner End */
+
+// Header Start
+
+header
+	.nav-sticky
+		display: flex
+		position: fixed
+		top: -400px // fridayblack
+		transition: .4s // fridayblack
+		justify-content: center
+		width: 100%
+		background-color: trancperent
+		box-shadow: 0 1px 2px 0 rgba(255,255,255,0.45)
+		z-index: 1000
+		&.whiteMenu
+			background-color: #FFFFFF
+			box-shadow: 0 2px 4px 0 rgba(32,32,32,0.5)
+			.navbar-desctop
+				.header-nav
+					.m-link
+						color: $text
+				.header-call
+					.m-ph
+						color: $text
+				.header-logo
+					.logo-link
+						background: url(../img/Logo/AquaGradusEng1-1.png) no-repeat center center
+						background-size: contain
+			.navbar-mobile
+				#menu
+					background-color: #FFFFFF
+					li
+						a
+							color: $text
+				.mob-box
+					.header-logo
+						.logo-link
+							background: url(../img/Logo/AquaGradusEng1-1.png) no-repeat center center
+							background-size: contain
+		.navbar-desctop
+			display: none
+			max-height: rem(60)
+			max-width: rem(1140)
+			width: 100%
+			justify-content: space-between
+			align-items: center
+			.header-logo
+				.logo-link
+					display: block
+					width: 100%
+					max-width: rem(154)
+					height: rem(40)
+					background: url(../img/Logo/AquaGradusEng1-2.png) no-repeat center center
+					background-size: contain
+				img
+					max-width: rem(154)
+			.header-nav
+				ul
+					display: flex
+					justify-content: center
+					li
+						a
+							display: block
+							height: rem(60)
+							color: #FFFFFF
+							font-size: rem(14)
+							line-height: rem(60)
+							vertical-align: middle
+							font-weight: 500
+							padding: 0 rem(10)
+							&:hover
+								text-decoration: none
+								background-color: rgba(0,0,0,0.1)
+
+			.header-call
+				display: flex
+				justify-content: space-between
+				align-items: center
+				.btn
+					display: block
+					height: rem(35)
+					width: rem(154)
+					line-height: rem(35)
+					text-align: center
+					vertical-align: middle
+					color: #fff
+					// margin-left: rem(-15)
+					padding: 0 rem(11)
+					&:hover
+						text-decoration: none
+						background-color: darken($orange, 10%)
+				.header-phones
+					margin-right: rem(-15)
+					font-size: rem(14)
+					font-weight: 500
+					p
+						margin: 0
+						a
+							color: #FFFFFF
+							&:hover
+								text-decoration: none
+		.navbar-mobile
+			// height: rem(60)
+			padding: rem(5) rem(15)
+			width: 100%
+			.mob-box
+				display: flex
+				align-items: center
+				justify-content: space-between
+				.icon
+					position: relative
+					width: rem(40)
+					height: rem(50)
+					cursor: pointer
+					margin-right: rem(30)
+					.hamburger
+						width: rem(30)
+						height: rem(2)
+						background-color: $accent
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						box-shadow: 0 1px 2px rgba(0,0,0,.2)
+						transition: .1s
+					.hamburger:before, .hamburger:after
+						content: ""
+						width: rem(30)
+						height: rem(2)
+						background-color: $accent
+						position: absolute
+						box-shadow: 0 1px 2px rgba(0,0,0,.2)
+						transition: .3s
+					.hamburger:before
+						top: rem(-8)
+					.hamburger:after
+						top: rem(8)
+					&.active
+						.hamburger
+							background-color: rgba(0,0,0,0)
+							box-shadow: 0 1px 2px rgba(0,0,0,0)
+					&.active
+						.hamburger:before
+							top: 0
+							transform: rotate(45deg)
+					&.active
+						.hamburger:after
+							top: 0
+							transform: rotate(135deg)
+				.header-logo
+					.logo-link
+						display: block
+						width: rem(212)
+						max-width: rem(140)
+						height: rem(55)
+						background: url(../img/Logo/AquaGradusEng1-2.png) no-repeat center center
+						background-size: contain
+					// img
+					// 	max-height: rem(55)
+				.header-phone-btn
+					margin-left: rem(30)
+					img
+						max-height: rem(55)
+			#menu
+				display: none
+				background-color: $text
+				li
+					a
+						display: block
+						text-align: center
+						padding: rem(5) 0
+						border-bottom: 1px solid $grey
+						color: #FFFFFF
+	.header-video
+		position: relative
+		background-color: black
+		height: 100vh
+		height: calc(var(--vh, 1vh) * 100)
+		// height: auto
+		min-height: rem(400)
+		width: 100%
+		overflow: hidden
+		background: url(../img/header/kompakt-orig.jpg) no-repeat center center
+		.overlay
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			background-color: black
+			background: url(../img/header/pattern.png)
+			opacity: 0.7
+			z-index: 1
+		video
+			display: none
+			position: absolute
+			top: 50%
+			left: 50%
+			min-width: 100%
+			min-height: 100%
+			width: auto
+			height: auto
+			z-index: 0
+			transform: translateX(-50%) translateY(-50%)
+		.container
+			position: relative
+			z-index: 2
+			padding-top: rem(80)
+			padding-bottom: rem(30)
+			color: #FFFFFF
+			height: 100%
+			.row
+				height: 100%
+				.cta-container
+					display: flex
+					flex-direction: column
+					justify-content: center
+					text-align: center
+					width: 100%
+					padding: 0 rem(15)
+					// height: 100%
+					.pre
+						font-family: $h-font
+						font-size: rem(18)
+						font-weight: normal
+						font-style: italic
+						margin-bottom: rem(40)
+					.h2
+						font-size: rem(38)
+						line-height: rem(42)
+						font-weight: bold
+						margin-bottom: rem(20)
+					.offer
+						font-family: $h-font
+						font-size: rem(20)
+						font-weight: normal
+						margin-bottom: 0
+				.button-container
+					display: flex
+					width: 100%
+					justify-content: center
+					.btn
+						flex: 0 1 rem(160)
+						margin: rem(10)
+					.btn-transp
+						background-color: transparent
+						border: 2px solid #FFF
+						&:hover
+							background-color: rgba(255, 255, 255, 0.4)
+				.scroll-container
+					width: 100%
+					align-self: flex-end
+					img
+						max-width: rem(50)
+						margin: 0 auto
+
+
+// Header End
+
+// Tips Start
+
+.tips
+	padding: rem(20)
+	background-color: #fff
+	.container
+		.row
+			justify-content: space-between
+			// flex-wrap: nowrap
+			.tips-container
+				display: flex
+				flex-direction: row
+				align-items: center
+				margin-bottom: rem(15)
+				img
+					flex: 0 0 auto
+					width: rem(64)
+					height: rem(64)
+					margin-right: rem(10)
+				p
+					font-size: rem(18)
+					font-weight: 500
+					line-height: rem(24)
+					margin: 0
+
+// Tips End
+
+// Video-plant Start
+
+.video-plant
+	background: url(../img/video-plant/c_bgc.jpg) repeat
+	background-attachment: fixed
+	.container
+		border-top: 1px solid $grey
+		border-bottom: 1px solid $grey
+		padding-top: rem(20)
+		padding-bottom: rem(20)
+		.row
+			.video
+				.video-container
+					position: relative
+					.embed-responsive
+						border-radius: 15px
+			.text
+				.h2
+					font-size: rem(18)
+					line-height: rem(24)
+					margin-bottom: rem(10)
+				.cta
+					font-family: $h-font
+					font-size: rem(14)
+					line-height: rem(18)
+					font-weight: bold
+
+// Video-plant End
+
+// Cover End
+
+.timer
+	display: flex
+	justify-content: center
+	font-size: rem(26)
+	font-weight: bold
+	text-align: center
+	margin-bottom: rem(20)
+	#days1, #hours1, #minutes1, #seconds1
+		min-width: rem(32)
+		.delimiter
+			width: rem(15)
+
+.catalog-lk
+	padding-top: rem(25)
+	padding-bottom: rem(25)
+	.container
+		.title__block
+			.title__line
+				.h2
+					margin-top: rem(20)
+					margin-bottom: rem(20)
+					text-align: center
+				p
+					font-size: rem(20)
+					text-align: center
+					color: #555
+				.info__postHeader
+					text-align: center
+					font-size: rem(26)
+		.cat__block
+			margin-bottom: rem(25)
+			.cat__item
+				.cat__wrapper
+					background-color: #f4f4f4
+					padding: rem(20) rem(20)
+					width: 100%
+					margin: 0 auto
+					.cat__inner
+						text-align: center
+						.h4
+							font-size: 18px
+							line-height: rem(22)
+							font-weight: normal
+							// text-transform: uppercase
+							.kozak
+								font-weight: bold
+								font-size: 20px
+								// color: #ca1020
+						img
+							margin-bottom: rem(20)
+							transition: 0.35s
+						.cat__price
+							margin-bottom: rem(10)
+							span
+								font-weight: normal
+								text-decoration: line-through
+								text-decoration-color: #000
+								font-size: 22px
+								color: #666
+								margin-right: rem(5)
+							strong
+								color: #ca1020
+								font-size: 32px
+								letter-spacing: -1px
+						.cat__button
+							margin-bottom: rem(20)
+							input
+								margin: rem(10) auto
+								height: rem(53)
+								line-height: rem(53)
+								color: $text
+								width: 100%
+								font-size: 13px
+								padding: 0 rem(20)
+								background-color: #fff
+								border: 0
+								display: block
+							.btn
+								margin: 0 auto
+								border: 0
+								height: rem(53)
+								line-height: rem(53)
+						.cat__text
+							padding: 0
+							margin: 0
+							li
+								list-style: none
+								font-size: 14px
+		.gifts__block
+			.gift__item
+				display: flex
+				justify-content: center
+				margin-bottom: rem(15)
+				.wrap
+					position: relative
+					height: rem(200)
+					width: rem(200)
+					&:hover .gift__text
+							transform: translateY(0)
+							opacity: 1
+					&:hover .gift__img
+						transform: scale(0.5) translateY(-100%)
+					.block
+						height: 100%
+						width: 100%
+						position: absolute
+						transition: .35s ease-in-out
+					.gift__text
+						background-color: rgba(1,1,1,0.4)
+						transform: translateY(100%)
+						line-height: initial
+						opacity: 0
+						z-index: 0
+						text-align: center
+						padding: rem(15) rem(15) rem(15)
+						h2
+							color: #fff
+							font-size: 28px
+							line-height: rem(29)
+							font-weight: normal
+							margin-top: rem(20)
+							margin-bottom: rem(10)
+							padding-bottom: rem(10)
+							font-weight: 200
+							border-bottom: 1px solid #f6f6f6
+						p
+							color: #fce980
+							font-size: 15px
+					.gift__img
+						transform: scale(1)
+						z-index: 1
+						border: 5px solid #fce980
+						border-radius: 50%
+		.cat__stoim
+			.col-12
+				p
+					text-align: center
+					font-size: 22px
+					padding-top: rem(10)
+					font-weight: bold
+
+// Catalog End
+
+/* Blackfriday Start */
+
+.blackfriday
+	padding: rem(30) rem(30)
+	background: url(../img/right.jpg) center left no-repeat, url(../img/left.jpg) center right no-repeat, #000000
+	background-size: contain
+	// background: url(../img/chrismas.jpg) repeat
+	.container
+		.bf-row
+			flex-direction: column
+			.bf-img-block
+				// width: 50%
+			.bf-text-block
+				// width: 50%
+				color: #fff
+				text-align: center
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				.aqua, .small-h
+					color: #0009ff
+					font-size: 38px
+					line-height: 38px
+					font-weight: bold
+				.aqua
+					margin-bottom: rem(20)
+					.logo-font
+						font-size: 42px
+				.img-responsive
+					margin: 0 auto
+				.small-h
+				.bf-adds
+					font-size: 18px
+					margin-bottom: rem(30)
+				.bf-btn
+					background-color: #0009ff
+					// max-width: rem(200)
+					padding: rem(15) rem(30)
+					text-decoration: none
+					color: #fff
+
+/* Blackfriday End */
+
+// Akciya Start
+
+.akciya
+	padding-top: rem(20)
+	.container
+		.akciya-box
+			background-color: #FFFFFF
+			margin-bottom: rem(20)
+			border-radius: 9px
+			overflow: hidden
+			.h2
+			.akciya-present
+				display: flex
+				flex-direction: column
+				width: 100%
+				padding: rem(15)
+				.akciya-img
+					border: 1px solid #7BCCF0
+					border-radius: 5px
+					max-height: rem(182)
+					padding: rem(20)
+					flex: 0 1 auto
+					margin-bottom: rem(15)
+					img
+						max-width: rem(120)
+						margin: 0 auto
+					.title
+						margin: 0
+						text-align: center
+						font-size: rem(18)
+						font-weight: bold
+				.akciya-timer
+					background: url(../img/akciya/timer-bg.png) no-repeat center/cover
+					flex: 1 0 auto
+					border-radius: 5px
+					padding: rem(10)
+					text-align: center
+					.timer-title
+						color: #FFFFFF
+						font-size: rem(18)
+						width: 100%
+						font-weight: bold
+						margin-bottom: rem(7)
+					.timer
+						display: flex
+						justify-content: space-around
+						width: 100%
+						color: #FFFFFF
+						.timer-points, .delimiter
+							font-size: rem(60)
+							line-height: rem(71)
+							font-weight: bold
+						.timer-points
+							min-width: rem(65)
+						.timer-text
+							font-size: rem(18)
+							line-height: initial
+						.delimiter
+							display: none
+			.akciya-form
+				display: flex
+				flex-direction: column
+				background-color: $orange
+				padding: rem(15)
+				width: 100%
+				margin: 0 rem(15)
+				border-radius: 0 0 9px 9px
+				input
+					height: rem(44)
+					border: 1px solid #FFFFFF
+					background-color: #FFFFFF
+					border-radius: 5px
+					color: $grey
+					padding: rem(14)
+					font-size: rem(14)
+					margin-right: rem(30)
+					width: 100%
+					max-width: rem(340)
+					margin-bottom: rem(15)
+				.btn-orange
+					border: 3px solid #FFFFFF
+
+// Akciya End
+
+// Modes Start
+
+.img-big
+	display: none
+
+.img-small
+	display: block
+	max-width: rem(380)
+	margin: 0 auto
+
+.modes
+	padding-top: rem(30)
+	padding-bottom: rem(30)
+	// background: url(../img/Modes/sam-bg.jpg) repeat
+	// background-attachment: fixed
+	.container
+		.row
+			.h2
+				text-align: center
+				width: 100%
+				margin-bottom: rem(30)
+			.carousel
+				width: 100%
+				.carousel-inner
+					.carousel-item
+						.row
+							.col-md-6
+								border-radius: 5px
+								background-color: #FFFFFF
+								margin-bottom: rem(30)
+								.mode-box
+									padding: rem(30)
+									.h2
+									p
+									img
+
+.no-webp, .no-js
+	.modes
+		background: url(../img/jpg/Modes/sam-bg.jpg) repeat
+		background-attachment: fixed
+
+.webp, .no-js
+	.modes
+		background: url(../img/webp/Modes/sam-bg.webp) repeat
+		background-attachment: fixed
+
+// Modes End
+
+// Video-instructions Start
+
+.video-instructions
+	background-color: #EEFAFF
+	padding: rem(30)
+	.container
+		.row
+		 	.h2
+		 		text-align: center
+		 		width: 100%
+		 		margin-bottom: rem(30)
+		 	.carousel
+		 		.carousel-inner
+		 			margin: 0
+		 			.carousel-item
+			 			.video-container
+					 		margin-bottom: rem(15)
+					 		border-radius: 9px
+					 		overflow: hidden
+					 		position: relative
+							.plh-video
+								cursor: pointer
+							.btn-video
+								position: absolute
+								width: rem(126)
+								height: rem(126)
+								background: top url(../img/video-instructions/play-1.png) no-repeat
+								top: 50%
+								left: 50%
+								transform: translate(-50%, -50%)
+								cursor: pointer
+								z-index: 50
+								&:hover
+									background: bottom url(../img/video-instructions/play-1.png) no-repeat
+					 	.title
+					 		font-family: $h-font
+					 		font-size: rem(18)
+					 		font-weight: bold
+					 		line-height: rem(24)
+					 		min-height: rem(72)
+
+// Video-instructions End
+
+// Book Start
+
+.book
+	background-color: #EEFAFF
+	padding-top: rem(20)
+	.container
+		.row
+			.book-form-box
+				padding-bottom: rem(30)
+				.h2
+					margin-bottom: rem(10)
+					text-align: center
+				.book-title
+					font-size: rem(14)
+					line-height: rem(18)
+					margin-bottom: rem(20)
+					font-weight: 500
+					text-align: center
+				.book-form
+					max-width: rem(360)
+					padding: rem(20) rem(15)
+					border-radius: 5px
+					background-color: #FFFFFF
+					box-shadow: 0 0 rem(48) 0 rgba(0,0,0,0.3)
+					margin: 0 auto
+					.book-form-title
+						font-size: rem(18)
+						font-weight: bold
+						line-height: rem(26)
+						text-align: center
+						margin-bottom: rem(20)
+					.book-form-group
+						display: flex
+						flex-direction: column
+						margin-bottom: rem(10)
+						.b-form-item
+							width: 100%
+							margin-bottom: rem(15)
+							height: rem(44)
+							border: 1px solid $grey
+							color: $grey
+							border-radius: 5px
+							background-color: #FFFFFF
+							padding: rem(14)
+					.book-police
+						font-size: rem(12)
+						line-height: rem(17)
+						color: $grey
+			.book-book
+				display: none
+				align-items: flex-end
+
+// Book End
+
+// Galery Start
+
+.gallery
+	padding-top: rem(30)
+	padding-bottom: rem(40)
+	background-color: #FAFDFF
+	.container
+		.row
+			.h2
+				margin-bottom: rem(30)
+				width: 100%
+				text-align: center
+		.tabs-gallery
+			display: flex
+			width: 100%
+			justify-content: center
+			margin-bottom: rem(20)
+			.tab-g
+				margin: 0 rem(9)
+				.gal-tablink
+					display: block
+					background-color: #FFFFFF
+					border: 1px solid $accent
+					border-radius: 5px
+					width: rem(155)
+					height: rem(36)
+					color: $accent
+					font-size: rem(14)
+					line-height: rem(36)
+					text-align: center
+					&:hover
+						text-decoration: none
+						color: #FFFFFF
+						background-color: $accent
+				&.active
+					.gal-tablink
+						background-color: $accent
+						color: #FFFFFF
+		.tab-content-g
+			.tab-gallery-box
+				display: none
+				.carousel
+					.carousel-inner
+						margin-bottom: rem(30)
+						.carousel-item
+							.row
+								.one-column
+									display: flex
+									justify-content: space-between
+									img
+										transition: all .8s ease-out
+										&:hover
+											transform: scale(1.1)
+									.fl-box
+										display: flex
+										flex-direction: column
+										justify-content: space-between
+									
+								.second-column
+									display: flex
+									flex-wrap: wrap
+									justify-content: space-between
+									img
+										transition: all .8s ease-out
+										&:hover
+											transform: scale(1.1)
+									.one
+										align-self: flex-start
+									.two
+										align-self: flex-end
+									.three
+										align-self: flex-end
+					// .carousel-indicators
+					// 	position: initial
+					// 	li
+					// 		position: relative
+					// 		width: rem(40)
+					// 		height: rem(9)
+					// 		margin: 0 rem(3)
+					// 		background-color: #fff
+					// 		border: 1px solid $accent
+					// 		border-radius: 5px
+					// 		&.active
+					// 			background-color: $accent
+				&.active
+					display: block
+// Galery End
+
+// Review Start
+
+.review
+	padding-top: rem(20)
+	padding-bottom: rem(20)
+	.container
+		.row
+			.h2
+				text-align: center
+				margin-bottom: rem(10)
+				width: 100%
+			.carousel
+				width: 100%
+				.carousel-inner
+					margin-bottom: rem(10)
+					.carousel-item
+						width: 100%
+						.row
+							.rev-video
+								flex: 0 0 auto
+								.rev-video-container
+									position: relative
+									min-width: rem(320)
+									padding: 15px
+									.rev-video-caption
+										// position: absolute
+										width: 100%
+										bottom: 0
+										padding: rem(10)
+										background-color: rgba(0,0,0,.2)
+										.caption-t
+											font-size: rem(14)
+											line-height: rem(16)
+											margin: 0
+							.rev-photo
+								display: none
+								width: 100%
+								border-radius: 5px
+								background-color: #FFFFFF
+								.rev-photo-img,
+								.rev-photo-caption
+									border: 4px solid $light-blue
+								.rev-photo-img
+									background: url(../img/review/review-1.jpg) no-repeat center center
+									background-size: cover
+									border-right: none
+								.rev-img-one
+									background: url(../img/review/review-1.jpg) no-repeat center center
+								.rev-img-two
+									background: url(../img/review/review-2.jpg) no-repeat center center
+								.rev-img-three
+									background: url(../img/review/review-3.jpg) no-repeat center center
+								.rev-img-four
+									background: url(../img/review/review-4.jpg) no-repeat center center
+								.rev-img-five
+									background: url(../img/review/review-5.jpg) no-repeat center center
+								.rev-img-six
+									background: url(../img/review/review-6.jpg) no-repeat center center
+								.rev-img-seven
+									background: url(../img/review/review-7.jpg) no-repeat center center
+								.rev-img-eight
+									background: url(../img/review/review-8.jpg) no-repeat center center
+								.rev-img-nine
+									background: url(../img/review/review-9.jpg) no-repeat center center
+								.rev-img-ten
+									background: url(../img/review/review-10.jpg) no-repeat center center
+								.rev-photo-caption
+									border-left: none
+									padding: rem(15) rem(20) rem(20)
+									.rev-name
+										position: relative
+										color: $accent
+										font-weight: bold
+										font-size: rem(18)
+										margin-bottom: rem(15)
+										.rev-date
+											position: absolute
+											font-size: rem(14)
+											font-weight: initial
+											color: #000
+											top: rem(-10)
+											right: rem(-10)
+									.mark-box
+										display: flex
+										margin-bottom: rem(15)
+										.rev-mark
+											flex: 0 0 auto
+											margin-right: rem(5)
+										.rev-mark-text
+											font-size: rem(12)
+											line-height: rem(14)
+									.rev-text
+										font-size: rem(14)
+										line-height: rem(20)
+										width: 100%
+				.carousel-control
+					display: flex
+					justify-content: center
+					.carousel-control-prev,
+					.carousel-control-next
+						margin: 0 rem(20)
+						width: rem(50)
+						height: rem(50)
+						opacity: 1
+						position: initial
+						background: url(../img/review/arrow-inactive.png) no-repeat
+						background-size: contain
+						&:hover
+							background: url(../img/review/arrow-active.png) no-repeat
+							background-size: contain
+					.carousel-control-next
+						transform: rotate(180deg)
+
+// Review End
+
+// Adds Start
+
+.adds
+	padding: rem(30) 0
+	background-color: #F2F2F2
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5)
+	.container
+		.row
+			.h2
+				width: 100%
+				text-align: center
+				margin-bottom: rem(5)
+			.title
+				font-family: $h-font
+				font-size: rem(18)
+				line-height: rem(24)
+				font-weight: bold
+				width: 100%
+				color: $accent
+				text-align: center
+				margin-bottom: rem(15)
+			.carousel-inner
+				.carousel-item
+					.carusel-box
+						display: flex
+						justify-content: space-around
+						align-items: center
+						max-width: 100%
+						flex-direction: column
+						.adds-box
+							border-radius: 5px
+							background-color: #FFFFFF
+							box-shadow: 0 0 rem(15) 0 rgba(0,0,0,0.2)
+							max-width: rem(270)
+							padding: rem(15)
+							margin-bottom: rem(30)
+							.adds-img
+								width: rem(200)
+								margin: 0 auto
+								margin-bottom: rem(20)
+							.adds-name
+								font-family: $h-font
+								font-weight: bold
+								font-size: rem(14)
+								line-height: rem(14)
+								margin-bottom: rem(10)
+							.adds-text
+								font-size: rem(14)
+								line-height: rem(18)
+								margin-bottom: rem(10)
+							.adds-prise
+								.price
+									font-family: $h-font
+									font-size: rem(28)
+									font-weight: 500
+									color: $accent
+									text-align: center
+									margin-bottom: rem(15)
+									span
+										font-size: rem(14)
+										color: $grey
+							.adds-btn
+								height: rem(40)
+			.carousel-indicators
+				width: 100%
+
+// Adds End
+
+// About Start
+
+.about
+	padding: rem(30) 0
+	background-color: #FAFDFF
+	.container
+		.row
+			.h2
+				text-align: center
+				margin-bottom: rem(20)
+				width: 100%
+			.about-step
+				.about-img
+					width: 100%
+					max-width: rem(48)
+					margin: 0 auto
+					margin-bottom: rem(18)
+				.about-title
+					font-size: rem(14)
+					line-height: rem(24)
+					text-align: center
+
+// About End
+
+// Faq Start
+
+.faq
+	padding-top: rem(20)
+	padding-bottom: rem(20)
+	.container
+		.row
+			.h2
+				text-align: center
+				margin-bottom: rem(10)
+				width: 100%
+			.faq-accord
+				.accordeon
+					.card
+						position: relative
+						display: flex
+						flex-direction: column
+						font-size: rem(14)
+					.x-collapse
+						.card-header
+							background-color: #f2f2f2
+							padding: rem(17) rem(20)
+							border-radius: 5px
+							margin-bottom: rem(10)
+							&.active
+								background-color: #7BCCF0
+								.title
+									.x-link
+										color: #FFFFFF
+							.title
+								font-weight: bold
+								margin: 0
+								.x-link
+									color: $text
+									display: flex
+									&:before
+										content: "-"
+										color: #FFFFFF
+										font-weight: bold
+										width: rem(20)
+										height: rem(20)
+										line-height: rem(20)
+										font-size: rem(18)
+									&.collapsed:before
+										content: "+"
+										color: $accent
+									&:hover
+										text-decoration: none
+						.collapse
+							line-height: rem(18)
+							.card-block
+								p
+									margin-bottom: rem(20)
+								.link
+									margin-right: rem(15)
+									color: $green
+			.faq-form
+				.faq-form-container
+					border: rem(5) solid #D7EFFA
+					border-radius: 5px
+					background-color: #FFFFFF
+					padding: rem(10)
+					.faq-title
+						font-family: $h-font
+						font-weight: bold
+						font-size: rem(24)
+						line-height: rem(29)
+						text-align: center
+						margin-bottom: rem(15)
+					.faq-cta
+						font-size: rem(14)
+						line-height: rem(18)
+						text-align: center
+						margin-bottom: rem(20)
+					.form-group
+						display: flex
+						flex-direction: column
+						.form-item
+							width: 100%
+							height: rem(44)
+							border: 1px solid $grey
+							color: $grey
+							border-radius: 5px
+							background-color: #FFFFFF
+							padding: rem(14)
+							margin-bottom: rem(15)
+						.com-item
+							height: initial
+
+// Faq End
+
+// Footer Start
+
+.footer
+	background-color: $accent
+	padding-top: rem(20)
+	padding-bottom: rem(20)
+	.container
+		.row
+			.footer-logo
+				img
+					margin: 0 auto
+			.footer-contacts, .footer-time, .footer-social, .footer-consultation
+				color: #FFFFFF
+				.f-title
+					font-size: rem(18)
+					line-height: rem(21)
+					text-align: center
+				.cont-box
+					.cont-item
+						display: flex
+						img
+							width: rem(16)
+							height: rem(16)
+							margin-right: rem(10)
+						.cont
+							font-size: rem(14)
+							line-height: rem(16)
+							margin-bottom: rem(13)
+						a
+							color: #FFFFFF
+							&:hover
+								text-decoration: none
+			.footer-contacts
+				padding: 0 rem(40)
+			.footer-time
+				.cont-box
+					display: flex
+					flex-direction: column
+					align-items: center
+					text-align: center
+			.footer-social
+				.f-soc-box
+					display: flex
+					justify-content: center
+					.soc-item
+						margin-right: rem(10)
+						&:last-child
+							margin: 0
+			.footer-consultation
+				.f-title
+					font-weight: bold
+					text-align: center
+					margin: rem(20) 0
+				.f-btn
+					color: $green
+					font-size: rem(14)
+					font-weight: bold
+					background-color: #FFF
+					&:hover
+						background-color: darken(#FFFFFF, 10%)
+
+// Footer End
+
+// Support
+
+header
+	// display: none
+.tips
+	// display: none
+.video-plant
+	// display: none
+.specification
+	// display: none
+.akciya
+	// display: none
+.video-instructions
+	// display: none
+.catalog
+	// display: none
+.book
+	// display: none
+.gallery
+	display: none
+.review
+	// display: none
+.adds
+	// display: none
+.about
+	// display: none
+.faq
+	// display: none
+.footer
+	// display: none
+
+@import "media" // Always at the end
